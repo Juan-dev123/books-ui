@@ -6,4 +6,4 @@ RUN npm install
 COPY . /app
 RUN npm run build --prod
 FROM nginx:1.17.1-alpine
-COPY --from=build-step /app/dist/ng-crud-card /usr/share/nginx/html
+COPY --from=build-step /app/dist/books-ui /usr/share/nginx/html
